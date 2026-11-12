@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b12">
+<meta name="description" content="Planet Colonizer — sistema de comando e gerenciamento de uma colônia em Marte.">
+<title>ARES // Planet Colonizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="#home"><span class="brand-symbol">A<span>✳</span></span><span class="brand-name">ARES<small>PLANET COLONIZER</small></span></a>
+    <div class="side-caption">MISSION CONTROL</div>
+    <nav>
+      <a class="nav-item selected" href="#home"><span class="nav-icon">⌂</span><span>Visão geral</span><kbd>01</kbd></a>
+      <a class="nav-item" href="#resources"><span class="nav-icon">◈</span><span>Recursos vitais</span><kbd>02</kbd></a>
+      <a class="nav-item" href="#population"><span class="nav-icon">♙</span><span>Colonos</span><kbd>03</kbd></a>
+      <a class="nav-item" href="#infrastructure"><span class="nav-icon">⌁</span><span>Infraestrutura</span><kbd>04</kbd></a>
+      <a class="nav-item" href="#logs"><span class="nav-icon">▤</span><span>Registro da missão</span><kbd>05</kbd></a>
+    </nav>
+    <div class="sidebar-spacer"></div>
+    <div class="mission-mini">
+      <div class="mini-top"><span>MISSÃO ATUAL</span><span class="live-dot"></span></div>
+      <strong>ARES-09</strong>
+      <div class="mini-track"><i></i></div>
+      <div class="mini-bottom"><span>EXPEDIÇÃO</span><b>68% CONCLUÍDA</b></div>
+    </div>
+    <div class="user-profile"><div class="user-avatar">AC</div><div><b>Comando Alpha</b><small>Administrador geral</small></div><span class="more">···</span></div>
+  </aside>
+
+  <main class="main" id="home">
+    <header class="topbar">
+      <div class="crumb">SISTEMA <span>/</span> MARTE <span>/</span> <b>SETOR ARES</b></div>
+      <div class="top-right"><div class="connection"><i></i> LINK ORBITAL ESTÁVEL</div><div class="clock" id="clock">--:--:-- <small>UTC</small></div><button class="notification" id="notifications" aria-label="Notificações">♧<i></i></button></div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> RELATÓRIO DE OPERAÇÕES <b>·</b> SOL 1.482</div>
+        <h1>O futuro da humanidade<br>está <em>em suas mãos.</em></h1>
+        <p>Bom dia, Comandante. Todos os sistemas foram sincronizados.<br>Aqui está o panorama da sua colônia.</p>
+        <div class="hero-meta"><span class="meta-pin">◎</span><span>PLANÍCIE DE UTOPIA</span><i></i><span>MARTE · 18° N, 77° E</span></div>
+      </div>
+      <div class="hero-planet">
+        <div class="planet-label label-top"><span class="label-line"></span> MARS / 04</div>
+        <div class="planet-orbit orbit-a"></div><div class="planet-orbit orbit-b"></div>
+        <div class="mars"><div class="mars-texture"></div><div class="mars-shadow"></div><i class="crater c1"></i><i class="crater c2"></i><i class="crater c3"></i><i class="crater c4"></i></div>
+        <div class="planet-satellite">✦</div>
+        <div class="planet-label label-bottom"><span>ATMOSFERA CONTROLADA</span><b>21.4°C</b></div>
+      </div>
+      <div class="hero-index">PC<span>://</span>2096</div>
+    </section>
+
+    <section class="status-strip">
+      <div class="strip-item"><span class="strip-icon">◉</span><div><small>STATUS DA COLÔNIA</small><b><i class="green-dot"></i> OPERACIONAL</b></div></div>
+      <div class="strip-item"><span class="strip-icon">⌁</span><div><small>PRESSÃO INTERNA</small><b>101.3 <small>kPa</small></b></div></div>
+      <div class="strip-item"><span class="strip-icon">☼</span><div><small>RADIAÇÃO EXTERNA</small><b>0.42 <small>mSv/h</small></b></div></div>
+      <div class="strip-item"><span class="strip-icon">⌖</span><div><small>PRÓXIMA TRANSMISSÃO</small><b>00:08:42</b></div></div>
+    </section>
+
+    <section class="section-head" id="resources"><div><div class="eyebrow">01 / MONITORAMENTO</div><h2>Recursos <em>vitais</em></h2><p>Indicadores em tempo real para a sobrevivência da colônia.</p></div><button class="outline-btn" id="sync">↻ <span>Sincronizar dados</span></button></section>
+    <section class="resource-grid">
+      <article class="resource-card water-card"><div class="resource-top"><span class="resource-icon">◉</span><span class="tag stable">● ESTÁVEL</span></div><div class="resource-name">Água potável</div><div class="resource-value">84<span>%</span></div><div class="resource-detail"><span>8.420 L disponíveis</span><span>Meta: 10.000 L</span></div><div class="meter"><i style="width:84%"></i></div><div class="resource-foot"><span>CONSUMO DIÁRIO</span><b>1.240 L <small>/ dia</small></b></div></article>
+      <article class="resource-card food-card"><div class="resource-top"><span class="resource-icon">⌑</span><span class="tag stable">● ESTÁVEL</span></div><div class="resource-name">Suprimento alimentar</div><div class="resource-value">77<span>%</span></div><div class="resource-detail"><span>6.180 kg disponíveis</span><span>Meta: 8.000 kg</span></div><div class="meter"><i style="width:77%"></i></div><div class="resource-foot"><span>AUTONOMIA ESTIMADA</span><b>42 <small>dias</small></b></div></article>
+      <article class="resource-card energy-card"><div class="resource-top"><span class="resource-icon">ϟ</span><span class="tag attention">● ATENÇÃO</span></div><div class="resource-name">Energia armazenada</div><div class="resource-value">72<span>%</span></div><div class="resource-detail"><span>7.200 kWh disponíveis</span><span>Meta: 10.000 kWh</span></div><div class="meter"><i style="width:72%"></i></div><div class="resource-foot"><span>GERAÇÃO SOLAR</span><b>92% <small>ativa</small></b></div></article>
+      <article class="resource-card oxygen-card"><div class="resource-top"><span class="resource-icon">✧</span><span class="tag stable">● ESTÁVEL</span></div><div class="resource-name">Oxigênio</div><div class="resource-value">96<span>%</span></div><div class="resource-detail"><span>9.600 m³ disponíveis</span><span>Meta: 10.000 m³</span></div><div class="meter"><i style="width:96%"></i></div><div class="resource-foot"><span>PUREZA DO AR</span><b>99.4% <small>ideal</small></b></div></article>
+    </section>
+
+    <section class="lower-grid" id="population">
+      <article class="glass-panel population-panel"><div class="panel-head"><div><div class="eyebrow">02 / DADOS DEMOGRÁFICOS</div><h2>População da <em>colônia</em></h2></div><span class="period">ÚLTIMOS 12 MESES⌄</span></div>
+        <div class="population-summary"><strong>2.481</strong><span class="growth">↗ 2,4% <small>vs. período anterior</small></span><span class="summary-note">HABITANTES REGISTRADOS</span></div>
+        <div class="chart-wrap"><div class="chart-labels"><span>2.500</span><span>2.000</span><span>1.500</span><span>1.000</span></div><div class="chart"><div class="chart-grid g1"></div><div class="chart-grid g2"></div><div class="chart-grid g3"></div><svg viewBox="0 0 600 170" preserveAspectRatio="none" aria-label="Gráfico de crescimento populacional"><defs><linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f28e61" stop-opacity=".3"/><stop offset="1" stop-color="#f28e61" stop-opacity="0"/></linearGradient></defs><path d="M0 145 C45 140 50 128 90 132 S145 106 180 113 S230 91 270 99 S320 70 360 80 S405 59 450 64 S510 37 545 42 S580 18 600 12 L600 170 L0 170Z" fill="url(#chartGradient)"/><path d="M0 145 C45 140 50 128 90 132 S145 106 180 113 S230 91 270 99 S320 70 360 80 S405 59 450 64 S510 37 545 42 S580 18 600 12" fill="none" stroke="#f28e61" stroke-width="3" vector-effect="non-scaling-stroke"/><circle cx="600" cy="12" r="5" fill="#f28e61" stroke="#251b1a" stroke-width="3"/></svg><div class="chart-months"><span>JAN</span><span>MAR</span><span>MAI</span><span>JUL</span><span>SET</span><span>NOV</span></div></div></div>
+        <div class="population-bottom"><span><i></i> Habitantes ativos</span><span>PROJEÇÃO POSITIVA</span></div>
+      </article>
+      <article class="glass-panel demographics"><div class="panel-head"><div><div class="eyebrow">03 / PERFIL DOS COLONOS</div><h2>Distribuição <em>populacional</em></h2></div></div>
+        <div class="donut-area"><div class="donut"><div><strong>2.481</strong><small>TOTAL</small></div></div><div class="donut-legend"><div><i class="legend-a"></i><span>Engenharia</span><b>34%</b></div><div><i class="legend-b"></i><span>Ciência</span><b>28%</b></div><div><i class="legend-c"></i><span>Saúde</span><b>22%</b></div><div><i class="legend-d"></i><span>Outros</span><b>16%</b></div></div></div>
+        <div class="demographic-foot"><span>IDADE MÉDIA</span><b>32,6 anos</b><span>CAPACIDADE DA BASE</span><b>3.000 pessoas</b></div>
+      </article>
+    </section>
+
+    <section class="lower-grid bottom-section" id="infrastructure">
+      <article class="glass-panel infra-panel"><div class="panel-head"><div><div class="eyebrow">04 / INFRAESTRUTURA</div><h2>Sistemas da <em>base</em></h2></div><span class="tag stable">4 ONLINE</span></div>
+        <div class="infra-list"><div class="infra-row"><span class="infra-symbol">⌂</span><div><b>Habitação Alpha</b><small>Módulos residenciais · 620 unidades</small></div><span class="online">ONLINE</span></div><div class="infra-row"><span class="infra-symbol">♧</span><div><b>Estufa BioDome</b><small>Produção agrícola automatizada</small></div><span class="online">ONLINE</span></div><div class="infra-row"><span class="infra-symbol">ϟ</span><div><b>Reator solar Helios</b><small>Distribuição e armazenamento</small></div><span class="online">ONLINE</span></div><div class="infra-row"><span class="infra-symbol">⌁</span><div><b>Purificador H₂O</b><small>Reciclagem e filtragem de água</small></div><span class="online">ONLINE</span></div></div>
+      </article>
+      <article class="alert-panel"><div class="alert-heading"><div class="eyebrow">05 / CENTRAL DE ALERTAS</div><span class="alert-number">01</span></div><div class="alert-mark">!</div><div class="alert-type">NÍVEL DE PRIORIDADE · MÉDIO</div><h2>Reserva de energia<br><em>abaixo da meta.</em></h2><p>O armazenamento está 8% abaixo do nível planejado. Ative os painéis auxiliares para recuperar a reserva energética.</p><button class="action-btn" id="solar">Ativar painéis auxiliares <span>↗</span></button><div class="alert-time">ALERTA GERADO HÁ 4 MINUTOS</div></article>
+    </section>
+
+    <section class="glass-panel log-panel" id="logs"><div class="panel-head"><div><div class="eyebrow">06 / TELEMETRIA</div><h2>Registro da <em>missão</em></h2></div><span class="log-live"><i></i> TRANSMISSÃO ATIVA</span></div><div class="log-list" id="log-list"><div class="log-row"><time>07:42:18</time><span class="log-ok">●</span><p><b>SISTEMA</b> — Sincronização geral concluída com sucesso.</p><small>INFO</small></div><div class="log-row"><time>07:38:02</time><span class="log-warn">●</span><p><b>ENERGIA</b> — Reserva energética abaixo da meta diária.</p><small>ALERTA</small></div><div class="log-row"><time>07:21:45</time><span class="log-ok">●</span><p><b>BIODOME</b> — Ciclo de cultivo automatizado finalizado.</p><small>INFO</small></div></div></section>
+    <footer><span>✳ ARES COLONY OS <b>· V 2.096.4</b></span><span>UM NOVO LAR PARA A HUMANIDADE.</span><span>SECURE CONNECTION <i></i></span></footer>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body></html>
